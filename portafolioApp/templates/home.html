@@ -1,0 +1,84 @@
+{% extends 'layout.html' %}
+
+{% load static %}
+
+{% block content %}
+
+    <!-- Section Hero -->
+    <div class="hero">
+
+        <h1 class="title">Hi!<br><span class="span-name">I'm Marcos</span>Web Developer </h1>
+
+        <a class="btn btn-warning button-home font-weight" href="#projects">Projects</a>
+    </div>
+
+    {% if request.path == 'aboutme' %} 
+        {% include 'partials/aboutme.html' %}
+    {% endif %}
+
+    
+
+    <!-- Skill -->
+
+    <div class="container global">
+        <div class="row">
+            <h1 class="title" style="text-align: center;" >Skillset</h1>
+            <div class="skills" >
+                <div class="contenedor-img" style="text-align: center;">
+                    <img class="img-skill" src="../static/img/skills/html.png" alt="">
+                    <p>Html</p>
+                </div>
+                <div class="contenedor-img">
+                    <img class="img-skill" src="../static/img/skills/css.png" alt="">
+                    <p>Css</p>
+                </div>
+                <div class="contenedor-img">
+                    <img class="img-skill" src="../static/img/skills/bootstrap.png" alt="">
+                    <p>Bootstrap</p>
+                </div>
+                <div class="contenedor-img">
+                    <img class="img-skill" src="../static/img/skills/python.png" alt="">
+                    <p>Python</p>
+                </div>
+                <div class="contenedor-img">
+                    <img class="img-skill" src="../static/img/skills/django.png" alt="">
+                    <p>Django</p>
+                </div>
+                <div class="contenedor-img">
+                    <img class="img-skill" src="../static/img/skills/postgresql.png" alt="">
+                    <p>Postgresql</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PROJECTS -->
+    <div id="projects"></div>
+    <div class="container-fluid index" >
+        <h1 class="title">My Projects</h1>
+        <div class="row" style="display: flex; justify-content: center;">
+        {% for project in projects %}
+            <div class="col-md-4 col-sm-6 col-xs-12 col-lg-4 d-flex justify-content-center my-2 p-4">
+                <div class="card color-card card-project" style="width: 18rem; ">
+                    <div class="">
+                        <img class="card-img-top img-card" src="{{project.image.url}}" alt="{{project.title}}" >
+                    </div>
+                    <div class="card-body">
+                        <h3 class="text-project">{{project.title}}</h3>
+
+                        <p class="text-project">{{project.description}}</p>
+
+                    </div>   
+                    <div class="card-footer" style="display: flex; justify-content: center;">
+                        {% if project.url %}
+                            <a  class="btn btn-light" style="width: auto;" href="{{project.url}}" target="_blank">Link</a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+
+        {% endfor %}
+        </div>
+    </div>
+
+{% endblock %}

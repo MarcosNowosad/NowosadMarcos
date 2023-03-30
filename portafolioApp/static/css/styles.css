@@ -1,0 +1,535 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@100;200;400;500;600;700;800;900&display=swap');
+body{
+    /* background-color: #15151e; */
+    background-color: #0e1117;
+    font-family: 'Prompt', sans-serif;
+
+}
+
+
+.container-all{
+    margin-top: 4rem;
+    margin-bottom: 5rem;
+    z-index: 10;
+    
+}
+/* Scroll Personalizado */
+
+html::-webkit-scrollbar {
+	width: 12px;
+}
+
+html::-webkit-scrollbar-thumb {
+	background: #ffc107;
+	border-radius: 5px;
+}
+
+
+html{
+    scroll-behavior: smooth;
+    
+}
+
+.font-weight{
+    font-weight: 500;
+} 
+
+
+
+
+
+/* ################ Navbar ################*/
+
+
+.navbar-nav{
+    background-color:#0E1117 ;
+    border-radius: 25px;
+    box-shadow: 1px 1px 5px rgba(87, 87, 87, 0.75);
+    padding: 0px 15px;
+}
+
+.navegacion{
+    padding-top: 1.4rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+    background-color: transparent;
+}
+
+.nav-link{
+    color:white;
+    font-weight: 500;
+
+}
+
+
+.nav-link:hover{
+    color:white;
+    font-weight: 500;
+
+}
+
+
+.navbar .nav-link.active{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    color: #ffc107;
+    border-bottom: 1px solid aqua;
+    transform: translatey(-3px);
+ 
+}
+
+/* navbar mobile */
+
+.navbar-toggler{
+    border: 1px solid #ffc107;
+}
+.navbar-toggler:focus{
+    outline: none;
+    box-shadow: 1px 1px 3px #644d07;
+}
+
+/* ################ Section Home ################*/
+
+
+.text-project{
+    color:white;
+}
+
+.card-project{
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.card-project:hover{
+    border: 1px solid white;
+    transition: 0.7s;
+}
+
+/* ###section hero### */
+
+.hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 90vh;
+    
+
+}
+
+/*###### TITLE (animation) ###### */
+.title{
+    text-align: center;
+    font-size: 5rem;
+    font-weight: 700;
+    color:white;
+    margin-bottom: 15px;
+}
+
+.span-name{
+    margin-left: 2.5rem;
+}
+.span-name {
+    display: block;
+    white-space: nowrap;
+    border-right: 4px solid;
+    width: 8.8ch;
+
+    animation: typing 2s steps(12), blink .5s infinite step-end alternate;
+    overflow:hidden;
+}
+    
+@keyframes typing {
+    from { width: 0}
+}
+    
+@keyframes blink {
+    50% { border-color: transparent}
+}
+
+
+.button-home{
+    width: 30%;
+    transition: all 150ms ease-in-out;
+}
+
+.button-home:hover{
+    transform: translateY(-10%);
+}
+
+.button-animated{
+    transition: all 150ms ease-in-out;
+
+}
+
+.button-animated:hover{
+    transform: translateY(-10%);
+}
+
+.button-animated:focus{
+    box-shadow: 3px  5px #755b0b;
+}
+
+
+.paragraph-gral{
+    font-weight: 500;
+    color: #888;
+}
+
+.h1-gral{
+    font-weight: 500;
+    color:aqua;
+}
+
+/* ###section About Me### */
+
+.about-me{
+    margin-top: 4rem;
+    margin-bottom: 5rem;
+    
+}
+
+/* ################ (Section footer) ################*/
+
+
+.footer-border{
+    
+    border-top: 1px solid #393969;
+    width: 80%;
+    
+}
+
+.icon{
+    color:white;
+}
+
+.icon:hover{
+    color:aqua;
+    
+}
+
+.icon-style{
+    height: 70%;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    margin-left: 5px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.75);
+    transition: all 150ms ease-in-out;
+}
+
+.icon-style:hover{
+    transform: translateY(-10%);
+}
+
+
+/* ################ Section Projects ################*/
+
+
+
+
+
+
+
+
+
+
+
+
+/* ################ Section Skills ################*/
+
+.img-skill{
+    background-color: #0E1117;
+    padding: 1.1rem;
+    overflow: visible;
+    box-shadow: 2px 2px 5px rgb(0, 0, 0);
+    /* margin-left: 4rem; */
+    /* width: 15%; */
+    width: 60%;
+    flex-wrap: wrap;
+    border-radius: 20%;
+    border: 1px solid #292d33;
+    transition: all 150ms ease-in-out;
+
+}
+
+
+.img-skill:hover{
+    transform: scale(1.1);
+}
+
+.global{
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.skills{
+    display: flex ;
+    justify-content: center;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.contenedor-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 20%;
+    gap: 15px;
+}
+/* #efecto hover a las skills */
+.contenedor-img, .img-skill p{
+    color: #888;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+}
+.contenedor-img:hover, .img-skill p{color: #ffc107;}
+/* ################ Section Blog ################
+   ################ Section Blog ################ */
+
+.color-card{
+    background-color: rgb(23,23,23);
+    color: white;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.75);
+    transition: all 200ms ease-in-out;
+}
+
+.color-card:hover{
+    transform: translateY(1%);
+}
+
+.color-card:focus{
+    width: 15rem;
+}
+
+.card-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-footer p{
+    background-color: #393969;
+    padding: 0px 3px;
+    border-radius: 5px;
+    margin: 0;
+}
+
+
+.blog-detail-1  {
+    background-color: rgb(231, 231, 231);
+    padding: 1.5rem;
+    border-radius: 10px;
+}
+
+.img-blog-detail{
+    border-radius: 3px;
+
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.75);
+}
+.blog-detail-2{
+    flex-wrap: wrap;
+    height: 520px;
+}
+
+.contenedor-paragraph{
+    margin-top: 1rem;
+    padding: 0 1rem;
+    border-left: 4px solid #ffc107;
+}
+.separador-blog{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+
+.img-card{
+    height: 200px;
+    overflow: hidden;
+    object-fit: cover;
+}
+/* ################ Section Contact ################
+   ################ Section Contact ################ */
+
+.contenedor{
+    display: flex;
+    justify-content: center;
+}
+.form{
+    width: 70%;
+}
+
+label{
+    font-weight: 500;
+    margin: 5px 0px;
+    color: #888;
+}
+
+.form input, .comment{
+    color:rgba(255, 255, 255, 0.452);
+    background-color: #171e2c;
+    border: none;
+    border-bottom: 2px solid #ffc107;
+    transition: all 150ms ease;
+}
+
+.form input:hover{
+    transform: scale(1.01);
+}
+.comment:hover{
+    transform: scale(1.01);
+}
+
+.form input::placeholder{
+    color: #cacaca;
+}
+
+
+.form input:focus{
+    color: white;
+    background-color: #454045;
+    border: none;
+    border-bottom: 1px solid #ffc107;
+    box-shadow: 2px 2px #ffc107;
+}
+
+.comment:focus{
+    color: white;
+    background-color: #454045;
+    border: none;
+    border-bottom: 1px solid #ffc107;
+    box-shadow: 2px 2px #ffc107;
+}
+
+
+@media (max-width: 756px){
+
+    .footer-content{
+        text-align: center;
+        justify-content: center;
+        flex-direction: column;
+
+    }
+    .list-unstyled{
+        justify-content: center;
+    }
+
+    .navbar-nav{
+        box-shadow: none;
+    }
+
+    .collapse{
+        background-color:#0E1117 ;
+        border-radius: 25px;
+        box-shadow: 1px 1px 5px rgba(87, 87, 87, 0.75);
+        padding: 5px 15px;
+        
+    }
+    .img-skill{
+        padding: 1.1rem;
+        width: 100%;
+
+    }
+}
+
+
+@media (max-width: 576px){
+
+   /* ################ Navbar ################*/
+   .container-all{
+        margin-top: 0rem;
+        margin-bottom: 5rem;
+        z-index: 10;
+        
+    }      
+     
+    .navegacion{
+        position: relative;
+    }
+
+
+    .boton-nav{
+        text-align: center;
+    }
+    /* ########### (section hero) ################ */
+
+    .hero{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+        height: 70vh;
+    
+    
+    }
+    
+
+    .title{
+        font-size: 3rem;
+        font-weight: 700;
+        color:white;
+        margin-bottom: 15px;
+    }
+
+    .span-name{
+        margin-left: 2.0rem;
+    }
+
+    .button-home{
+        width: 50%;
+    }
+    /* ##########(SECTION About-me MOBILE )############ */
+
+    .about-me{
+        margin-bottom: 5rem;
+        height: 90vh;
+    }
+    
+    .about-me .text-project{
+        text-align: center;
+    }
+
+    .about-me p,
+    .h1-gral{
+        text-align: center;
+    }
+
+    .boton-about{
+        display: flex;
+        justify-content: center;
+    }
+    /* ##########(SECTION FOOTER MOBILE )############ */
+    .footer-content{
+
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-content p {
+        text-align: center;
+    }
+    /* ################ Section Skills ################*/
+
+    .img-skill{
+        padding: 1.1rem;
+        width: 130%;
+
+    }
+
+    /* ############## SECTION CONTACT ############# */
+
+    .button-contact{
+        text-align: center;
+    }
+}
+
+

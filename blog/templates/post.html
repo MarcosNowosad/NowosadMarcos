@@ -1,0 +1,28 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="container">
+    <div class="row" style="justify-content: center; flex-direction: row-reverse;">
+
+        {% for post in posts %}
+        <div class="contenedor-card col-md-4 col-sm-6 col-xs-12 d-flex justify-content-center my-2" >
+                <div class="card color-card"  style="width: 18rem;  overflow: hidden;">
+                    <div class="contendor-img card-img">
+                        <img class="card-img-top img-card" src="{{post.image.url}}" alt="{{post.title}}" style="width: 100%;">
+                    </div>
+                    <div class="card-body">
+                        <h4>{{post.title}}</h4> 
+                        <!-- como interpretar un archivo html en el admin blog  |safe|-->
+                        <p style="color:rgb(255,255,255,0.5);">{{post.description|striptags|truncatechars:50}}</p>
+                        
+                    </div>
+                    <div class="card-footer" style="text-align: center;">
+                        <a class="btn btn-warning" href="{% url 'blog:post_detail' post.id %}" >See</a>
+                        <p>{{post.date|date:"N d Y"}}</p>
+                    </div>
+                </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
