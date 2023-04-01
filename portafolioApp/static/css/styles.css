@@ -331,12 +331,18 @@ html{
 
 .img-blog-detail{
     border-radius: 3px;
-
+    width: 70%;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.75);
 }
 .blog-detail-2{
     flex-wrap: wrap;
     height: 520px;
+}
+
+.section-blog img{
+    margin-bottom: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.75);
+
 }
 
 .contenedor-paragraph{
@@ -350,6 +356,12 @@ html{
     gap: 1rem;
 }
 
+.section-blog{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    width: 50%;
+}
 
 .img-card{
     height: 200px;
@@ -525,6 +537,20 @@ label{
 
     }
 
+    /* ################ Section Blog ################*/
+
+    .section-blog{
+        display: block;
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+    }
+    .section-blog img{
+        margin-bottom: 10px;
+    }
+    .img-blog-detail{
+        width: 100%;
+    }
     /* ############## SECTION CONTACT ############# */
 
     .button-contact{

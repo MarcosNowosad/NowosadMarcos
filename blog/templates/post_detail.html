@@ -2,7 +2,7 @@
 
 {% block content %}
 
-<div class="container">
+<div class="container my-5">
 
     <div class="row separador-blog">
         <div class="col-lg-12 blog-detail-1">
@@ -10,34 +10,29 @@
             <h1 style="text-transform: uppercase;">{{post.title}}</h1>
             <p class="paragraph-gral" style="text-decoration: underline;">Posted on {{post.date}}</p>
             <div style="display: flex; justify-content: center;">
-                <img class="img-blog-detail" src="{{post.image.url}}" alt="{{post.title}}" style="width: 70%;">
+                <img class="img-blog-detail" src="{{post.image.url}}" alt="{{post.title}}">
             </div>
-            <div class="contenedor-paragraph">
+            <div class="contenedor-paragraph" style="display: flex; justify-content: center; flex-direction: column;">
                 <p>{{post.description|safe}}</p>
             </div>
-        </div>
-    </div>
-    <div class="row separador-blog my-2">
-        {% for post in post1 %}
-            <div class="col-md-3 col-sm-6 col-xs-12  d-flex justify-content-center my-2" >
-                    <div class="card color-card"  style="width: 18rem;  overflow: hidden;">
-                        <div class="contendor-img" style="height: auto;">
-                            <img class="card-img-top img-card" src="{{post.image.url}}" alt="{{post.title}}" style="width: 100%;">
-                        </div>
-                        <div class="card-body">
-                            <h3>{{post.title}}</h3> 
-                            <h3>{{post.date}}</h3>                  
-                            <!-- como interpretar un archivo html en el admin blog  |safe|-->
-                            <p style="color:rgb(255,255,255,0.5);">{{post.description|striptags|truncatechars:50}}</p>
-                            
-                        </div>
-                        <div class="card-footer" style="text-align: center;">
-                            <a class="btn btn-warning" href="{% url 'blog:post_detail' post.id %}" >See</a>
-                            <p>{{post.date|date:"N d Y"}}</p>
-                        </div>
-                    </div>
+            <div class=" section-blog my-2" style="width: 100%;" >
+                {% if post.image2 %}
+                <a href="{{post.image2.url}}" target="_blank"  style="width: 40%;">
+                    <img class="img-card" src="{{post.image2.url}}" alt="{{post.title}}" style="width: 100%; border-radius: 5px;">
+                </a>
+                {% endif %}
+                {% if post.image3 %}
+                <a href="{{post.image3.url}}" target="_blank" style="width: 40%;">
+                    <img class="img-card" src="{{post.image3.url}}" alt="{{post.title}}" style="width: 100%; border-radius: 5px;">
+                </a>
+                {% endif %}
+                {% if post.image4 %}
+                <a href="{{post.image4.url}}" target="_blank" style="width: 40%;">
+                    <img class="img-card" src="{{post.image4.url}}" alt="{{post.title}}" style="width: 100%; border-radius: 5px;">
+                </a>
+                {% endif %}
             </div>
-        {% endfor %}
+        </div>
     </div>
 </div>
 {% endblock %}
